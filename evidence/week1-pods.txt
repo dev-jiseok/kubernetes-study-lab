@@ -1,0 +1,3 @@
+$ kubectl get pods -n week1 -o wide
+NAME    READY   STATUS    RESTARTS   AGE   IP           NODE                   NOMINATED NODE   READINESS GATES
+nginx   1/1     Running   0          30s   10.244.2.2   jiseok-netlab-worker   <none>           <none>

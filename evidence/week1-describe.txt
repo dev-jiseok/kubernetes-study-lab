@@ -1,0 +1,53 @@
+$ kubectl describe pod -n week1 nginx
+Name:             nginx
+Namespace:        week1
+Priority:         0
+Service Account:  default
+Node:             jiseok-netlab-worker/172.21.0.3
+Start Time:       Thu, 19 Nov 2026 18:25:36 +0900
+Labels:           app=nginx
+Annotations:      <none>
+Status:           Running
+IP:               10.244.2.2
+IPs:
+  IP:  10.244.2.2
+Containers:
+  nginx:
+    Container ID:   containerd://775e9d7012812c08ffdb05b40d086f2b818a99387232922520cf59cbd3f45564
+    Image:          nginx:1.27
+    Image ID:       docker.io/library/nginx@sha256:6784fb0834aa7dbbe12e3d7471e69c290df3e6ba810dc38b34ae33d3c1c05f7d
+    Port:           80/TCP (http)
+    Host Port:      0/TCP (http)
+    State:          Running
+      Started:      Thu, 19 Nov 2026 18:25:43 +0900
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-br4q2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-br4q2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  31s   default-scheduler  Successfully assigned week1/nginx to jiseok-netlab-worker
+  Normal  Pulling    30s   kubelet            Pulling image "nginx:1.27"
+  Normal  Pulled     24s   kubelet            Successfully pulled image "nginx:1.27" in 6.472s (6.472s including waiting). Image size: 68857691 bytes.
+  Normal  Created    24s   kubelet            Container created
+  Normal  Started    24s   kubelet            Container started
