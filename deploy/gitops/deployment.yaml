@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b
+          image: ghcr.io/dev-jiseok/nginx-api:5720d8bf031ab767cc7c38024209ea122debbd3a
           ports:
             - containerPort: 8080
           resources:
