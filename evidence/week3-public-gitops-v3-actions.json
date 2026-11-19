@@ -1,0 +1,175 @@
+{
+  "conclusion": "success",
+  "databaseId": 44513783761,
+  "headSha": "5a3f260e5b7945c7290bfef48d7f4ad40f657d9b",
+  "jobs": [
+    {
+      "completedAt": "2026-11-19T11:19:57Z",
+      "conclusion": "success",
+      "databaseId": 135524422199,
+      "name": "build",
+      "startedAt": "2026-11-19T11:19:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-19T11:19:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-19T11:19:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-11-19T11:19:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:35Z",
+          "conclusion": "success",
+          "name": "Run echo \"image=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/nginx-api:${GITHUB_SHA}\" >> \"$GITHUB_OUTPUT\"",
+          "number": 3,
+          "startedAt": "2026-11-19T11:19:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:39Z",
+          "conclusion": "success",
+          "name": "Run docker/setup-qemu-action@v3",
+          "number": 4,
+          "startedAt": "2026-11-19T11:19:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:42Z",
+          "conclusion": "success",
+          "name": "Run docker/setup-buildx-action@v3",
+          "number": 5,
+          "startedAt": "2026-11-19T11:19:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:43Z",
+          "conclusion": "success",
+          "name": "Run docker/login-action@v3",
+          "number": 6,
+          "startedAt": "2026-11-19T11:19:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:52Z",
+          "conclusion": "success",
+          "name": "Run docker/build-push-action@v6",
+          "number": 7,
+          "startedAt": "2026-11-19T11:19:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:54Z",
+          "conclusion": "success",
+          "name": "Post Run docker/build-push-action@v6",
+          "number": 10,
+          "startedAt": "2026-11-19T11:19:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:54Z",
+          "conclusion": "success",
+          "name": "Post Run docker/login-action@v3",
+          "number": 11,
+          "startedAt": "2026-11-19T11:19:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:55Z",
+          "conclusion": "success",
+          "name": "Post Run docker/setup-buildx-action@v3",
+          "number": 12,
+          "startedAt": "2026-11-19T11:19:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:55Z",
+          "conclusion": "success",
+          "name": "Post Run docker/setup-qemu-action@v3",
+          "number": 13,
+          "startedAt": "2026-11-19T11:19:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:56Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 14,
+          "startedAt": "2026-11-19T11:19:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:19:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-19T11:19:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dev-jiseok/kubernetes-study-lab/actions/runs/44513783761/job/135524422199"
+    },
+    {
+      "completedAt": "2026-11-19T11:20:05Z",
+      "conclusion": "success",
+      "databaseId": 135524662923,
+      "name": "update-manifest",
+      "startedAt": "2026-11-19T11:19:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-19T11:20:01Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-19T11:20:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:20:02Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-11-19T11:20:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:20:03Z",
+          "conclusion": "success",
+          "name": "Update desired state in Git",
+          "number": 3,
+          "startedAt": "2026-11-19T11:20:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:20:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 6,
+          "startedAt": "2026-11-19T11:20:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T11:20:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-11-19T11:20:03Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dev-jiseok/kubernetes-study-lab/actions/runs/44513783761/job/135524662923"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/dev-jiseok/kubernetes-study-lab/actions/runs/44513783761"
+}

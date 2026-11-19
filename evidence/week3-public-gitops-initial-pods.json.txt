@@ -1,0 +1,522 @@
+$ kubectl -n cicd-gitops get pods -l app=nginx-api -o json
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-19T09:43:58Z",
+                "deletionGracePeriodSeconds": 30,
+                "deletionTimestamp": "2026-11-19T11:19:55Z",
+                "generateName": "nginx-api-5bc66dc678-",
+                "generation": 2,
+                "labels": {
+                    "app": "nginx-api",
+                    "pod-template-hash": "5bc66dc678"
+                },
+                "name": "nginx-api-5bc66dc678-j72gs",
+                "namespace": "cicd-gitops",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "nginx-api-5bc66dc678",
+                        "uid": "3fc38942-a9e6-4fa4-8766-b576470e21fa"
+                    }
+                ],
+                "resourceVersion": "15773",
+                "uid": "0fc2b59a-c7c0-4f76-9244-f12fdf1f2a2d"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "nginx",
+                        "ports": [
+                            {
+                                "containerPort": 8080,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 2,
+                            "periodSeconds": 2,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "10m",
+                                "memory": "16Mi"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-rskwg",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "imagePullSecrets": [
+                    {
+                        "name": "ghcr-lab-pull"
+                    }
+                ],
+                "nodeName": "jiseok-netlab-worker",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "kube-api-access-rskwg",
+                        "projected": {
+                            "defaultMode": 420,
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ],
+                                        "name": "kube-root-ca.crt"
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                },
+                                                "path": "namespace"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T11:19:25Z",
+                        "observedGeneration": 2,
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T09:43:58Z",
+                        "observedGeneration": 2,
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T11:19:25Z",
+                        "observedGeneration": 2,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T11:19:25Z",
+                        "observedGeneration": 2,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T09:43:58Z",
+                        "observedGeneration": 2,
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "allocatedResources": {
+                            "cpu": "10m",
+                            "memory": "16Mi"
+                        },
+                        "containerID": "containerd://59ce4516f5323edabe0b4dee4fddf803d405923e0ab99e364ca51bf16a59bc4b",
+                        "image": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b",
+                        "imageID": "ghcr.io/dev-jiseok/nginx-api@sha256:be3c86db1a816335a2ed7ca8cba760ebf3575776780e8d38de5362eb344b0433",
+                        "lastState": {},
+                        "name": "nginx",
+                        "ready": false,
+                        "resources": {
+                            "limits": {
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "10m",
+                                "memory": "16Mi"
+                            }
+                        },
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://59ce4516f5323edabe0b4dee4fddf803d405923e0ab99e364ca51bf16a59bc4b",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-19T11:19:25Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-19T09:44:02Z"
+                            }
+                        },
+                        "user": {
+                            "linux": {
+                                "gid": 0,
+                                "supplementalGroups": [
+                                    0,
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    6,
+                                    10,
+                                    11,
+                                    20,
+                                    26,
+                                    27
+                                ],
+                                "uid": 0
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-rskwg",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "172.21.0.3",
+                "hostIPs": [
+                    {
+                        "ip": "172.21.0.3"
+                    }
+                ],
+                "observedGeneration": 2,
+                "phase": "Succeeded",
+                "podIP": "10.244.2.12",
+                "podIPs": [
+                    {
+                        "ip": "10.244.2.12"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-19T09:43:58Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-19T11:19:21Z",
+                "generateName": "nginx-api-6db5cc5b94-",
+                "generation": 1,
+                "labels": {
+                    "app": "nginx-api",
+                    "pod-template-hash": "6db5cc5b94"
+                },
+                "name": "nginx-api-6db5cc5b94-msqs2",
+                "namespace": "cicd-gitops",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "nginx-api-6db5cc5b94",
+                        "uid": "7bcd79e6-5a88-46a0-9d95-8027536379c8"
+                    }
+                ],
+                "resourceVersion": "15755",
+                "uid": "b89826e5-909a-492b-8b55-d5540fb68929"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "ghcr.io/dev-jiseok/nginx-api:5720d8bf031ab767cc7c38024209ea122debbd3a",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "nginx",
+                        "ports": [
+                            {
+                                "containerPort": 8080,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 2,
+                            "periodSeconds": 2,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "10m",
+                                "memory": "16Mi"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-s776t",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "jiseok-netlab-worker2",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "kube-api-access-s776t",
+                        "projected": {
+                            "defaultMode": 420,
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ],
+                                        "name": "kube-root-ca.crt"
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                },
+                                                "path": "namespace"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T11:19:22Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T11:19:21Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T11:19:25Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T11:19:25Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-19T11:19:21Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "allocatedResources": {
+                            "cpu": "10m",
+                            "memory": "16Mi"
+                        },
+                        "containerID": "containerd://ce7ddf8b122292630538eb16234e084553c8707ea58053de58156b0dd843e6a6",
+                        "image": "ghcr.io/dev-jiseok/nginx-api:5720d8bf031ab767cc7c38024209ea122debbd3a",
+                        "imageID": "ghcr.io/dev-jiseok/nginx-api@sha256:c926bdbf669b6629fe54f99b96106ada5fca2112dde5a804613343964bf31cb0",
+                        "lastState": {},
+                        "name": "nginx",
+                        "ready": true,
+                        "resources": {
+                            "limits": {
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "10m",
+                                "memory": "16Mi"
+                            }
+                        },
+                        "restartCount": 0,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2026-11-19T11:19:22Z"
+                            }
+                        },
+                        "user": {
+                            "linux": {
+                                "gid": 0,
+                                "supplementalGroups": [
+                                    0,
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    6,
+                                    10,
+                                    11,
+                                    20,
+                                    26,
+                                    27
+                                ],
+                                "uid": 0
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-s776t",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "172.21.0.4",
+                "hostIPs": [
+                    {
+                        "ip": "172.21.0.4"
+                    }
+                ],
+                "observedGeneration": 1,
+                "phase": "Running",
+                "podIP": "10.244.1.24",
+                "podIPs": [
+                    {
+                        "ip": "10.244.1.24"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-19T11:19:21Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

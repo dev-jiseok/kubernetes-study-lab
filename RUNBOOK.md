@@ -2,15 +2,11 @@
 
 작성자: 이지석 / dev-jiseok. 공용 레포에는 3주차만 제출합니다.
 
-## 현재 제한
+## 최종 검증 결과
 
-GHCR 패키지가 Private입니다. 실제 배포 검증은 `GITHUB_TOKEN`으로 만든 임시 imagePullSecret을 사용했습니다. 이 토큰은 해당 job 종료 시 만료되므로 상시 인증 구성이 아닙니다. **과제의 Public GHCR 요건은 아직 미완료**입니다. Git 읽기용 Argo CD deploy key와 이미지 pull 인증은 별개입니다.
+소스 저장소는 Private, GHCR 패키지는 Public입니다. 공개 전환 후 개인 자격 증명 없는 manifest 요청이 HTTP 200이고, registry Secret과 ServiceAccount/Pod imagePullSecrets 없이 새 SHA 이미지로 v1·v2 직접 배포와 v3 자동 GitOps 배포를 완료했습니다.
 
-1. dev-jiseok으로 https://github.com/users/dev-jiseok/packages/container/nginx-api/settings 에서 Public으로 변경합니다.
-2. 익명 `docker buildx imagetools inspect ghcr.io/dev-jiseok/nginx-api:<전체 소스 SHA>` 성공을 확인합니다.
-3. `kubectl --context kind-jiseok-netlab -n cicd-gitops patch serviceaccount default -p '{"imagePullSecrets":[]}'`로 임시 참조를 정리합니다. 검증 종료 시 이미 정리했으면 생략합니다.
-4. `app/nginx.conf` 응답을 다음 버전으로 바꿔 main에 push합니다.
-5. Actions 완료뿐 아니라 Application Synced/Healthy, 새 Pod image/imageID, 실제 API 응답을 확인합니다.
+실측 전체 값은 `evidence/week3-public-verification.json`에 있습니다. 과거 파일의 Private/임시 인증 기록은 공개 전환 이전의 이력입니다. 현재 재현에는 이미지 pull 토큰이 필요하지 않습니다.
 
 ## 클러스터와 도구
 
@@ -33,7 +29,7 @@ helm template nginx deploy/helm/nginx --set replicaCount=2
 
 ## Direct CI
 
-과제 2 시점 워크플로는 `examples/ci-direct.yml`에 보존했습니다. Public 전환 후에는 임시 인증 단계를 제거한 `examples/ci-direct-public.yml`을 참고합니다. self-hosted runner는 개인 비공개 레포에 등록하고 `jiseok-k8s` 라벨과 이 실습 클러스터 kubeconfig를 갖도록 실행합니다. main push만 배포하고 외부 PR은 실행하지 않습니다.
+공개 이미지로 최종 검증한 과제 2 워크플로는 `examples/ci-direct-public.yml`에 보존했습니다. `examples/ci-direct.yml`은 공개 전환 전 임시 인증을 사용한 과거 기록입니다. self-hosted runner는 개인 비공개 레포에 등록하고 `jiseok-k8s` 라벨과 이 실습 클러스터 kubeconfig를 갖도록 실행합니다. main push만 배포하고 외부 PR은 실행하지 않습니다.
 
 ## GitOps
 
@@ -46,7 +42,7 @@ kubectl --context kind-jiseok-netlab apply -f infra/argocd-application.yaml
 kubectl --context kind-jiseok-netlab -n argocd get application nginx-api
 ```
 
-현재 `.github/workflows/ci.yml`은 GitHub-hosted runner에서 이미지 빌드와 Git 갱신만 합니다. Argo CD가 `main:deploy/gitops`를 읽고 자동 적용합니다. `registry-session.yml`은 Public 전환 전의 한시적 인증 검증 도구이며 앱 배포 명령은 없습니다. 새로 실행하면 과거 종료 표시 ConfigMap을 지우고 최대 40분 동안 임시 토큰을 유지합니다. `kubectl -n cicd-gitops create configmap verification-complete`를 실행하면 종료합니다.
+현재 `.github/workflows/ci.yml`은 GitHub-hosted runner에서 이미지 빌드와 Git 갱신만 합니다. Argo CD가 `main:deploy/gitops`를 읽고 자동 적용합니다. 과거의 `registry-session.yml`은 공개 전환 전 한시적 인증을 위한 파일이며, 공개 이미지 최종 검증에서는 실행하지 않았습니다. 현재 재현에는 필요하지 않습니다.
 
 ## 발표 시연 (3분)
 
@@ -63,4 +59,4 @@ kubectl --context kind-jiseok-netlab -n cicd-gitops get deploy,rs,pods
 
 Argo CD UI를 직접 확인하려면 별도 터미널에서 `kubectl -n argocd port-forward svc/argocd-server 18443:443`를 실행하고 `https://localhost:18443`를 엽니다. 관리자 초기 비밀번호는 로컬 Secret으로만 확인하고 캡처하거나 보고서에 넣지 않습니다.
 
-라이브 시연 전에는 GHCR Public 전환과 익명 pull을 먼저 확인합니다. 불가능하면 저장된 검증 결과를 보여 주고, 현재 제약을 설명합니다. 문서의 실측 성공을 현재 시점의 지속적인 재배포 가능성으로 설명하지 않습니다.
+라이브 시연 전에는 로컬 kind와 Argo CD가 실행 중인지 확인합니다. 새 응답 버전을 시연하려면 app/nginx.conf를 수정해 main에 push하고 Actions 성공, 새 manifest commit, Argo CD Synced/Healthy, 실제 응답 순서로 확인합니다.

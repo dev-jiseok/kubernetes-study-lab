@@ -1,0 +1,193 @@
+{
+  "previousImageAnonymous": {
+    "anonymousManifestHTTP": 200,
+    "digest": "sha256:be3c86db1a816335a2ed7ca8cba760ebf3575776780e8d38de5362eb344b0433",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      }
+    ]
+  },
+  "v1": {
+    "sourceSHA": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "image": "ghcr.io/dev-jiseok/nginx-api:e0ec1aa1422384646872a3888622d20f16535be8",
+    "pod": "nginx-api-9f59ff989-cqfpr",
+    "podImage": "ghcr.io/dev-jiseok/nginx-api:e0ec1aa1422384646872a3888622d20f16535be8",
+    "imageID": "ghcr.io/dev-jiseok/nginx-api@sha256:cc9548e6c025a85a79b925e81869aba8a341541064d8980913a124c3b39c34a2",
+    "response": {
+      "message": "hello from nginx",
+      "version": "v1"
+    },
+    "httpStatus": 200,
+    "imagePullSecrets": [],
+    "anonymousManifestHTTP": 200,
+    "digest": "sha256:cc9548e6c025a85a79b925e81869aba8a341541064d8980913a124c3b39c34a2",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      }
+    ],
+    "actions": {
+      "conclusion": "success",
+      "databaseId": 44512969147,
+      "headSha": "e0ec1aa1422384646872a3888622d20f16535be8",
+      "status": "completed",
+      "url": "https://github.com/dev-jiseok/kubernetes-study-lab/actions/runs/44512969147"
+    }
+  },
+  "v2": {
+    "sourceSHA": "5720d8bf031ab767cc7c38024209ea122debbd3a",
+    "image": "ghcr.io/dev-jiseok/nginx-api:5720d8bf031ab767cc7c38024209ea122debbd3a",
+    "pod": "nginx-api-6db5cc5b94-l44r2",
+    "podImage": "ghcr.io/dev-jiseok/nginx-api:5720d8bf031ab767cc7c38024209ea122debbd3a",
+    "imageID": "ghcr.io/dev-jiseok/nginx-api@sha256:c926bdbf669b6629fe54f99b96106ada5fca2112dde5a804613343964bf31cb0",
+    "response": {
+      "message": "hello from nginx",
+      "version": "v2"
+    },
+    "httpStatus": 200,
+    "imagePullSecrets": [],
+    "anonymousManifestHTTP": 200,
+    "digest": "sha256:c926bdbf669b6629fe54f99b96106ada5fca2112dde5a804613343964bf31cb0",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      }
+    ],
+    "actions": {
+      "conclusion": "success",
+      "databaseId": 44513140814,
+      "headSha": "5720d8bf031ab767cc7c38024209ea122debbd3a",
+      "status": "completed",
+      "url": "https://github.com/dev-jiseok/kubernetes-study-lab/actions/runs/44513140814"
+    }
+  },
+  "initial": {
+    "sourceSHA": "5720d8bf031ab767cc7c38024209ea122debbd3a",
+    "image": "ghcr.io/dev-jiseok/nginx-api:5720d8bf031ab767cc7c38024209ea122debbd3a",
+    "pod": "nginx-api-6db5cc5b94-msqs2",
+    "podImage": "ghcr.io/dev-jiseok/nginx-api:5720d8bf031ab767cc7c38024209ea122debbd3a",
+    "imageID": "ghcr.io/dev-jiseok/nginx-api@sha256:c926bdbf669b6629fe54f99b96106ada5fca2112dde5a804613343964bf31cb0",
+    "response": {
+      "message": "hello from nginx",
+      "version": "v2"
+    },
+    "httpStatus": 200,
+    "imagePullSecrets": [],
+    "anonymousManifestHTTP": 200,
+    "digest": "sha256:c926bdbf669b6629fe54f99b96106ada5fca2112dde5a804613343964bf31cb0",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      }
+    ],
+    "argo": {
+      "time": "2026-11-19T11:19:25Z",
+      "revision": "8fda02ca582bac8882aa78466f7025eafc101e62",
+      "sync": "Synced",
+      "health": "Healthy",
+      "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:5720d8bf031ab767cc7c38024209ea122debbd3a"
+    },
+    "manifestCommit": "8fda02ca582bac8882aa78466f7025eafc101e62"
+  },
+  "v3": {
+    "sourceSHA": "5a3f260e5b7945c7290bfef48d7f4ad40f657d9b",
+    "image": "ghcr.io/dev-jiseok/nginx-api:5a3f260e5b7945c7290bfef48d7f4ad40f657d9b",
+    "pod": "nginx-api-79674b5f94-9xcbg",
+    "podImage": "ghcr.io/dev-jiseok/nginx-api:5a3f260e5b7945c7290bfef48d7f4ad40f657d9b",
+    "imageID": "ghcr.io/dev-jiseok/nginx-api@sha256:8778b897081cb9a8fd2232601652cffa69103345ffb0358b6db8d4dbe56ebf56",
+    "response": {
+      "message": "hello from nginx",
+      "version": "v3"
+    },
+    "httpStatus": 200,
+    "imagePullSecrets": [],
+    "anonymousManifestHTTP": 200,
+    "digest": "sha256:8778b897081cb9a8fd2232601652cffa69103345ffb0358b6db8d4dbe56ebf56",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      }
+    ],
+    "actions": {
+      "conclusion": "success",
+      "databaseId": 44513783761,
+      "headSha": "5a3f260e5b7945c7290bfef48d7f4ad40f657d9b",
+      "status": "completed",
+      "url": "https://github.com/dev-jiseok/kubernetes-study-lab/actions/runs/44513783761"
+    },
+    "argo": {
+      "time": "2026-11-19T11:23:55Z",
+      "revision": "17d19c122ea737e454aba043119dfce329fbfee9",
+      "sync": "Synced",
+      "health": "Healthy",
+      "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:5a3f260e5b7945c7290bfef48d7f4ad40f657d9b"
+    }
+  },
+  "complete": true
+}

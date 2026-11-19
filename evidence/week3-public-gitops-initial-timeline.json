@@ -1,0 +1,247 @@
+[
+  {
+    "time": "2026-11-19T11:16:31Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:16:36Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:16:41Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:16:47Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:16:52Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:16:57Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:02Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:07Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:12Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:17Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:22Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:28Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:33Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:38Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:43Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:48Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:53Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:17:58Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:03Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:09Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:14Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:19Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:24Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:29Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:34Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:39Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:44Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:50Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:18:55Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:19:00Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:19:05Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:19:10Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:19:15Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:19:20Z",
+    "revision": "e0ec1aa1422384646872a3888622d20f16535be8",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:931143126b7ebce575a0d39b55e2e1dcb29a8c2b"
+  },
+  {
+    "time": "2026-11-19T11:19:25Z",
+    "revision": "8fda02ca582bac8882aa78466f7025eafc101e62",
+    "sync": "Synced",
+    "health": "Healthy",
+    "deploymentImage": "ghcr.io/dev-jiseok/nginx-api:5720d8bf031ab767cc7c38024209ea122debbd3a"
+  }
+]
