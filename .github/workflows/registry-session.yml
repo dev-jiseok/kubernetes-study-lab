@@ -22,8 +22,21 @@ jobs:
             --dry-run=client -o json | kubectl --context "$KUBE_CONTEXT" -n cicd-gitops apply --server-side -f -
           kubectl --context "$KUBE_CONTEXT" -n cicd-gitops patch serviceaccount default \
             -p '{"imagePullSecrets":[{"name":"ghcr-lab-pull"}]}'
+          export DOCKER_CONFIG="$RUNNER_TEMP/ghcr-lab-docker"
+          mkdir -p "$DOCKER_CONFIG"
+          trap 'docker logout ghcr.io >/dev/null 2>&1 || true' EXIT
+          printf '%s' "$GHCR_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          for sha in 2fd1d557a21844cdbe3a3be3c7cea23c0fa6aed6 ef7956987576fd5e2cc6ede09671492710cdbdfc; do
+            docker buildx imagetools inspect "ghcr.io/dev-jiseok/nginx-api:$sha"
+          done
+          LAST_IMAGE=''
           echo 'Temporary private pull credentials active only during this job. Public GHCR remains required.'
           for i in {1..80}; do
+            IMAGE=$(kubectl --context "$KUBE_CONTEXT" -n cicd-gitops get deployment nginx-api -o jsonpath='{.spec.template.spec.containers[0].image}' 2>/dev/null || true)
+            if [[ -n "$IMAGE" && "$IMAGE" != "$LAST_IMAGE" ]]; then
+              docker buildx imagetools inspect "$IMAGE" || true
+              LAST_IMAGE="$IMAGE"
+            fi
             if kubectl --context "$KUBE_CONTEXT" -n cicd-gitops get configmap verification-complete >/dev/null 2>&1; then
               exit 0
             fi
